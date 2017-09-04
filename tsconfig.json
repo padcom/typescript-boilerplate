@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "sourceRoot": "src",
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
