@@ -1,6 +1,8 @@
 import * as $ from 'jquery'
 import { Person } from './person'
 
+import './jquery-foo'
+
 function f (x: number) {
    return x + x
 }
@@ -14,4 +16,15 @@ const people = [
   new Person('Jane', 'Smith'),
 ]
 
+const o1 = { name: 'John' }
+const o2 = { ...o1, age: 30 }
+
 people.forEach(person => console.log(person))
+
+declare global {
+  interface JQuery {
+    foo (): JQuery
+  }
+}
+
+$('div').foo()

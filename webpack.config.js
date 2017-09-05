@@ -12,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       { test: /\.ts$/, include: __dirname + '/src', loader: "tslint-loader", enforce: 'pre' },
-      { test: /\.ts$/, include: __dirname + '/src', loader: "ts-loader" }
+      { test: /\.[tj]s$/, include: __dirname + '/src', loader: "ts-loader" }
     ]
   },
   devtool: 'source-map',
