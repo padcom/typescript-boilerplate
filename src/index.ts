@@ -1,30 +1,17 @@
-import * as $ from 'jquery'
 import { Person } from './person'
-
-import './jquery-foo'
-
-function f (x: number) {
-   return x + x
-}
-
-function g (x: string) {
-  return `X: ${x}`
-}
 
 const people = [
   new Person('John', 'Doe'),
   new Person('Jane', 'Smith'),
 ]
 
-const o1 = { name: 'John' }
-const o2 = { ...o1, age: 30 }
+people.forEach(person => console.log(person.name))
 
-people.forEach(person => console.log(person))
+import * as $ from 'jquery'
+import './jquery-foo'
 
-declare global {
-  interface JQuery {
-    foo (): JQuery
-  }
-}
+$('div').foo({ color: 'red' })
 
-$('div').foo()
+import { f } from './functions'
+
+console.log(f(2))

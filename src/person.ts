@@ -1,10 +1,10 @@
 export class Person {
-  constructor (
+  constructor(
     public firstName: string,
     public lastName: string,
   ) { }
 
-  get name () {
+  get name() {
     return `${this.firstName} ${this.lastName}`
   }
 }
