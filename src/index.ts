@@ -1,3 +1,5 @@
+import './fonts/icons/icons.font'
+
 import { Person } from './person'
 
 const people = [

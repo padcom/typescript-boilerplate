@@ -12,7 +12,8 @@ module.exports = {
   module: {
     rules: [
       { test: /\.ts$/, include: __dirname + '/src', loader: "tslint-loader", enforce: 'pre' },
-      { test: /\.[tj]s$/, include: __dirname + '/src', loader: "ts-loader" }
+      { test: /\.[tj]s$/, include: __dirname + '/src', loader: "ts-loader" },
+      { test: /\.font\.(js|json)$/, include: __dirname + '/src', loader: 'style-loader!css-loader!fontgen-loader' },
     ]
   },
   devtool: 'source-map',
